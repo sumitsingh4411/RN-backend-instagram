@@ -11,13 +11,13 @@ const postFileCtrl = {
             const newUpload = new Upload({
                 name, email, url
             })
-            await newUpload.save()
+            await newUpload.save();
             res.json({ msg: "uploaded successfully!" })
         } catch (err) {
             return res.status(500).json({ msg: err.message })
         }
     },
-    homepageimage: async (req, res) => {
+    gethomepageimage: async (req, res) => {
         try {
             const data = await Upload.find();
             res.json(data)

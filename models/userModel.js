@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -20,6 +19,14 @@ const userSchema = new mongoose.Schema({
     role: {
         type: Number,
         default: 0 // 0 = user, 1 = admin
+    },
+    followers: {
+        type: Number,
+        default: 0
+    },
+    following: {
+        type: Number,
+        default: 0
     },
     avatar: {
         type: String,

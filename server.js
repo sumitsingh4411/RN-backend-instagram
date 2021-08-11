@@ -11,7 +11,7 @@ app.use(cors())
 
 // Routes
 app.use('/user', require('./routes/userRouter'))
-
+app.use('/upload', require('./routes/postFile'))
 
 // Connect to mongodb
 const URI = process.env.MONGODB_URL

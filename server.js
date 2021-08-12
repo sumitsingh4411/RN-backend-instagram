@@ -15,7 +15,7 @@ app.use('/upload', require('./routes/postFile'))
 
 // Connect to mongodb
 const URI = process.env.MONGODB_URL
-mongoose.connect('mongodb+srv://sumit:asdf@cluster0.1m8fn.mongodb.net/instagram?retryWrites=true&w=majority', {
+mongoose.connect('add your mongodb connection url', {
     useCreateIndex: true,
     useFindAndModify: false,
     useNewUrlParser: true,

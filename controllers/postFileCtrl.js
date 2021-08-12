@@ -4,12 +4,12 @@ const Upload = require('../models/postFile');
 const postFileCtrl = {
     homepageimage: async (req, res) => {
         try {
-            const { name, email, url } = req.body
+            const { name, email, url, caption, reels } = req.body
 
             if (!name || !email || !url)
                 return res.status(400).json({ msg: "Please fill in all fields." })
             const newUpload = new Upload({
-                name, email, url
+                name, email, url, caption, reels
             })
             await newUpload.save();
             res.json({ msg: "uploaded successfully!" })
